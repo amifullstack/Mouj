@@ -5,6 +5,8 @@ const PORT = 5000;
 
 const app = express();
 
+
+
 // webpack-hot-middleware
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
@@ -27,9 +29,11 @@ app.use(webpackHotMiddleware(webpackCompiler, {
 }))
 
 
-app.use('/', (req, res) => {
+app.use('/*', (req, res) => {
   res.sendFile(path.resolve('public/index.html'))
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`We're live on PORT: ${PORT}`);  
