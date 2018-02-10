@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SideBar from '../../Shared/SideBar/SideBar';
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -8,11 +9,12 @@ class ProfilePage extends Component {
   render() {
     const {match} = this.props;
     return(
-      <section>
-        <div>
-          {match.params.id}
+      <div className="row">
+        <div className="col-sm-12 col-lg-8">
+          This is the profile page {match.params.id}
         </div>
-      </section>
+        <SideBar />
+      </div>
     )
   }
 }

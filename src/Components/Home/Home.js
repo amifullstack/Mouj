@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SideBar from '../Shared/SideBar/SideBar';
 
 class Home extends Component {
   constructor(props) {
@@ -7,17 +8,16 @@ class Home extends Component {
 
   render() {
     return(
-      <section className="page-content">
+      
         <div className="row">
           <div className="col-sm-12 col-lg-8">
             This is Home Page
           </div>
-          <aside className="col-sm-12 col-lg-4">
-            This is Home Sidebar
-          </aside>
+          <SideBar />
+          
         </div>
 
-      </section>
+       
     )
   }
 }

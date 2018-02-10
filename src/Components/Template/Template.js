@@ -16,8 +16,10 @@ class Template extends Component {
       <Router>
         <div className="wrapper">        
           <Header />          
-          <Route exact path="/" component={ Home } />
-          <Route path="/account/profile/:id" component={ProfilePage} />
+          <section className="page-content">
+            <Route exact path="/" component={ Home } />
+            <Route path="/account/profile/:id" component={ProfilePage} />
+          </section>
         </div>
       </Router>
     )    
